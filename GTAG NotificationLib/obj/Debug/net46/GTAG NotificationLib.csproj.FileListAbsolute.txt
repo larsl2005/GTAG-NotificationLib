@@ -1,0 +1,20 @@
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\bin\Debug\net46\GTAG_NotificationLib.dll
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\bin\Debug\net46\GTAG_NotificationLib.pdb
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\bin\Debug\net46\BepInEx.dll
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\bin\Debug\net46\BepInEx.Harmony.dll
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\bin\Debug\net46\HarmonyXInterop.dll
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\bin\Debug\net46\UnityEngine.CoreModule.dll
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\bin\Debug\net46\UnityEngine.dll
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\bin\Debug\net46\UnityEngine.TextCoreModule.dll
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\bin\Debug\net46\UnityEngine.TextRenderingModule.dll
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\bin\Debug\net46\UnityEngine.UI.dll
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\bin\Debug\net46\UnityEngine.UIElementsModule.dll
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\bin\Debug\net46\UnityEngine.UIModule.dll
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\obj\Debug\net46\GTAG NotificationLib.csproj.AssemblyReference.cache
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\obj\Debug\net46\GTAG NotificationLib.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\obj\Debug\net46\GTAG NotificationLib.AssemblyInfoInputs.cache
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\obj\Debug\net46\GTAG NotificationLib.AssemblyInfo.cs
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\obj\Debug\net46\GTAG NotificationLib.csproj.CoreCompileInputs.cache
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\obj\Debug\net46\GTAG NotificationLib.csproj.CopyComplete
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\obj\Debug\net46\GTAG_NotificationLib.dll
+E:\Projects\GTAG NotificationLib\GTAG NotificationLib\obj\Debug\net46\GTAG_NotificationLib.pdb
