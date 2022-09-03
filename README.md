@@ -10,3 +10,5 @@ Add "GTAG_NotificationLib.dll" as an assembly reference to your project.
 Put "using GTAG_NotificationLib;" at the top of the project.
 To send a notification, use "NotifiLib.SendNotification("Whatever you want here");"
 To check the previously sent notification. use "NotifiLib.PreviousNotifi" (to prevent sending the same notification twice for example);
+To clear all notifications use NotifiLib.ClearAllNotifications()
+To clear a certain amount of notifications use NotifiLib.ClearPastNotifications(amount (int))
