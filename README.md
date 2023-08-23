@@ -1,3 +1,5 @@
+# IF YOU USE THIS, PLEASE GIVE CREDIT!
+
 # GTAG-NotificationLib
 Notification ui mod for gorilla tag, allowed to be used by anyone.
 Based of off the notifications from the "LHAX" mod menu, which was also made by me.
