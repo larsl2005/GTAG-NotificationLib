@@ -3,32 +3,34 @@ using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using HarmonyLib;
 
 namespace GTAG_NotificationLib
 {
     [BepInPlugin("HabibiLars.NotificationLib", "NotificationLib", "1.0")]
     public class NotifiLib : BaseUnityPlugin
     {
-        GameObject HUDObj;
-        GameObject HUDObj2;
-        GameObject MainCamera;
-        Text Testtext;
-        Material AlertText = new Material(Shader.Find("GUI/Text Shader"));
-        int NotificationDecayTime = 150;
-        int NotificationDecayTimeCounter = 0;
+        static GameObject MainCamera;
+        static GameObject HUDObj;
+        static GameObject HUDObj2;
+        static Text Testtext;
+        static Material AlertText = new Material(Shader.Find("GUI/Text Shader"));
+        static int NotificationDecayTime = 150;
+        static int NotificationDecayTimeCounter = 0;
         public static int NoticationThreshold = 30; //Amount of notifications before they stop queuing up
-        string[] Notifilines;
-        string newtext;
+        static string[] Notifilines;
+        static string newtext;
         public static string PreviousNotifi;
-        bool HasInit = false;
+        static bool HasInit = false;
         static Text NotifiText;
         public static bool IsEnabled = true;
         private void Awake()
         {
             // Plugin startup logic
             Logger.LogInfo($"Plugin NotificationLib is loaded!");
+            Harmony.CreateAndPatchAll(typeof(NotifiLib));
         }
-        private void Init()
+        private static void Init()
         {
             //this is mostly copy pasted from LHAX, which was also made by me.
             //LHAX got leaked the day before this. so i might as well make this public cus people asked me to.
@@ -64,15 +66,15 @@ namespace GTAG_NotificationLib
             Testtext.rectTransform.localScale = new Vector3(0.01f, 0.01f, 1f);
             Testtext.rectTransform.localPosition = new Vector3(-1.5f, -.9f, -.6f);
             Testtext.material = AlertText;
-            NotifiText = Testtext; 
+            NotifiText = Testtext;
         }
-        
-        private void FixedUpdate()
+
+        private static void FixedUpdate()
         {
             //This is a bad way to do this, but i do not want to rely on utila.
-            if(HasInit == false)
+            if (HasInit == false)
             {
-                if(GameObject.Find("Main Camera") != null)
+                if (GameObject.Find("Main Camera") != null)
                 {
                     Init();
                     HasInit = true;
@@ -136,5 +138,16 @@ namespace GTAG_NotificationLib
 
             NotifiText.text = newtext;
         }
+
+        //This is probably not the way i should have fixed it, but it "works" (I CANNOT STRESS THIS ENOUGH, DONT DO IT LIKE THIS!)
+        #region HackyFixedUpdateFix
+        [HarmonyPatch(typeof(GorillaLocomotion.Player), "FixedUpdate")]
+        [HarmonyPrefix]
+        static bool FixedUpdateHook()
+        {
+            FixedUpdate();
+            return true;
+        }
+        #endregion
     }
 }
